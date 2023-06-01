@@ -1,4 +1,4 @@
-import './add/Add.scss';
+import './Add.scss';
 
 const Add = () => {
     return <div className="add">Add</div>;

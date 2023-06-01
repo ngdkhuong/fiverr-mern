@@ -1,5 +1,4 @@
 import './Navbar.scss';
-import Logo from '../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -29,9 +28,10 @@ const Navbar = () => {
         <div className={active ? 'navbar active' : 'navbar'}>
             <div className="container">
                 <div className="logo">
-                    <Link to="/">
-                        <img src={Logo} />
+                    <Link className="link" to="/">
+                        <span className="text">liverr</span>
                     </Link>
+                    <span className="dot">.</span>
                 </div>
                 <div className="links">
                     <span>Fiverr Business</span>
