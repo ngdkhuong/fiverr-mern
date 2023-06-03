@@ -6,7 +6,7 @@
     color: white;
 
     .container {
-        width: 1400px;
+        width: 1320px;
         display: flex;
         align-items: center;
 
@@ -24,11 +24,9 @@
             }
 
             .search {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 background-color: white;
                 border-radius: 5px;
+                position: relative;
 
                 .search-input {
                     display: flex;
@@ -42,6 +40,9 @@
                     }
 
                     input {
+                        width: 100%;
+                        padding: 10px;
+                        margin: 7px 0;
                         border: none;
                         outline: none;
                     }
@@ -54,6 +55,9 @@
                     background-color: #1dbf73;
                     color: white;
                     cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                 }
             }
 

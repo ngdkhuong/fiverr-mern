@@ -1,0 +1,85 @@
+.home {
+    .features {
+        background-color: #f1fdf7;
+        display: flex;
+        justify-content: center;
+        padding: 100px 0;
+
+        &:last-child {
+            background-color: #0d084d;
+            color: white;
+
+            .container {
+                .item {
+                    .title {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .container {
+            width: 1320px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                &:first-child {
+                    flex: 3;
+                }
+
+                &:last-child {
+                    flex: 2;
+                }
+
+                h1 {
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 28px;
+                    letter-spacing: 1px;
+                }
+
+                .title {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 500;
+                    font-size: 18px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        color: rgb(80, 80, 80);
+                    }
+                }
+
+                button {
+                    background-color: #19a463;
+                    padding: 12px 24px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    width: max-content;
+                    margin-top: 20px;
+                }
+
+                video,
+                img {
+                    width: 720px;
+                }
+            }
+        }
+    }
+}

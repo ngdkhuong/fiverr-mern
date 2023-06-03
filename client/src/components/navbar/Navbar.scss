@@ -8,6 +8,7 @@
     position: sticky;
     top: 0;
     font-family: 'Montserrat', sans-serif;
+    z-index: 999;
 
     &.active {
         background-color: white;
@@ -15,7 +16,7 @@
     }
 
     .container {
-        width: 1400px;
+        width: 1320px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -94,7 +95,7 @@
     }
 
     .categories {
-        width: 1400px;
+        width: 1320px;
         padding: 10px 0;
         display: flex;
         justify-content: space-between;
