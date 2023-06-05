@@ -60,3 +60,76 @@ export const cards = [
         img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png',
     },
 ];
+
+export const projects = [
+    {
+        id: 1,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_400,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615082/christophbrandl.png',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_400,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615082/christophbrandl.png',
+        cat: 'Web and Mobile Design',
+        username: 'Anna Bell',
+    },
+    {
+        id: 2,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_400,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615084/fernandobengua.png',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_400,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615084/fernandobengua.png',
+        cat: 'Logo Design',
+        username: 'Morton Green',
+    },
+    {
+        id: 3,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615068/mijalzagier.png',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615068/mijalzagier.png',
+        cat: 'Animated GIFs',
+        username: 'Emmett Potter',
+    },
+    {
+        id: 4,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/aa2ff6a65708e858cd563bedbc1f9e48-1617004762616/spickex.jpeg',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/aa2ff6a65708e858cd563bedbc1f9e48-1617004762616/spickex.jpeg',
+        cat: 'Packaging Design',
+        username: 'Freddie Johnston',
+    },
+    {
+        id: 5,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615106/skydesigner.png',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615106/skydesigner.png',
+        cat: 'Social Media Design',
+        username: 'Audrey Richards',
+    },
+    {
+        id: 6,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615063/annapietrangeli.jpeg',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615063/annapietrangeli.jpeg',
+        cat: 'Illustration',
+        username: 'Dalton Hudson',
+    },
+    {
+        id: 7,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/d51cf66f8a7026eb56a8c8e6b6793b24-1617027896306/lamonastudio-img.png',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/d51cf66f8a7026eb56a8c8e6b6793b24-1617027896306/lamonastudio-img.png',
+        cat: 'Book Design',
+        username: 'Hannah Dougherty',
+    },
+    {
+        id: 8,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615063/bruno_malagrino.png',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615063/bruno_malagrino.png',
+        cat: 'Digital Marketing',
+        username: 'Ward Brewer',
+    },
+    {
+        id: 9,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615077/eveeelin.jpeg',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615077/eveeelin.jpeg',
+        cat: 'Logo Design',
+        username: 'eveeelin',
+    },
+    {
+        id: 10,
+        img: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615069/noneyn.png',
+        pp: 'https://fiverr-res.cloudinary.com/q_auto,f_auto,w_320,dpr_1.0/v1/attachments/generic_asset/asset/f23a46693ef0e611430e232cbc989e2b-1617004615069/noneyn.png',
+        cat: 'Portraits & Caricatures',
+        username: 'noneyn',
+    },
+];

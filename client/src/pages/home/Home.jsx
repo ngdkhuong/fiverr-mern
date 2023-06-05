@@ -2,7 +2,7 @@ import Featured from '../../components/featured/Featured';
 import Slide from '../../components/slide/Slide';
 import TrustedBy from '../../components/strustedBy/TrustedBy';
 import './Home.scss';
-import { cards } from './../../data';
+import { cards, projects } from './../../data';
 import SlideCard from '../../components/slideCard/SlideCard';
 
 const Home = () => {
@@ -48,7 +48,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="features">
+            <div className="features dark">
                 <div className="container">
                     <div className="item">
                         <h1>fiverr business.</h1>
@@ -77,6 +77,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Slide slidesToShow={4} arrowsScroll={4}>
+                {projects.map((project) => (
+                    <SlideCard item={project} key={project.id} />
+                ))}
+            </Slide>
         </div>
     );
 };
