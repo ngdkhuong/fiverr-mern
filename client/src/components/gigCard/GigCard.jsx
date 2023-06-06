@@ -1,9 +1,9 @@
-import 'GigCard.scss';
+import './GigCard.scss';
 import { Link } from 'react-router-dom';
 
 const GigCard = ({ item }) => {
     return (
-        <Link to="/gig/123">
+        <Link to="/gig/123" className="link">
             <div className="gig-card">
                 <img src={item.img} alt="" />
                 <div className="info">

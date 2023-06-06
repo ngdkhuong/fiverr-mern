@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './Gigs.scss';
+import { gigs } from './../../data';
+import GigCard from './../../components/gigCard/GigCard';
 
 const Gigs = () => {
     const [sort, setSort] = useState('sales');
@@ -37,6 +39,11 @@ const Gigs = () => {
                             </div>
                         )}
                     </div>
+                </div>
+                <div className="cards">
+                    {gigs.map((gig) => (
+                        <GigCard key={gig.id} item={gig} />
+                    ))}
                 </div>
             </div>
         </div>
