@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Gigs.scss';
 import { gigs } from './../../data';
 import GigCard from './../../components/gigCard/GigCard';
+import { Link } from 'react-router-dom';
 
 const Gigs = () => {
     const [sort, setSort] = useState('sales');
@@ -15,7 +16,12 @@ const Gigs = () => {
     return (
         <div className="gigs">
             <div className="container">
-                <span className="breadcrumbs">Liverr - Graphics & Design </span>
+                <h1 className="breadcrumbs">
+                    <Link to="/" className="link">
+                        Liverr
+                    </Link>
+                    - Graphics & Design
+                </h1>
                 <h1>AI Artist</h1>
                 <p>Explore the boundaries of art and technology with Liverr's AI artists</p>
                 <div className="menu">
