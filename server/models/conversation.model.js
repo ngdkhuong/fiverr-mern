@@ -11,12 +11,10 @@ const conversationSchema = new Schema(
         sellerId: {
             type: String,
             required: true,
-            unique: true,
         },
         buyerId: {
             type: String,
             required: true,
-            unique: true,
         },
         readBySeller: {
             type: Boolean,

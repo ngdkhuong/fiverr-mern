@@ -23,7 +23,7 @@ const userSchema = new Schema(
         },
         country: {
             type: String,
-            required: false,
+            required: true,
         },
         phone: {
             type: String,

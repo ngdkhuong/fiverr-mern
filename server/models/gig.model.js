@@ -28,14 +28,14 @@ const gigSchema = new Schema(
             required: true,
         },
         price: {
-            type: String,
+            type: Number,
             required: true,
         },
         cover: {
             type: String,
             required: true,
         },
-        image: {
+        images: {
             type: [String],
             required: true,
         },
@@ -49,11 +49,11 @@ const gigSchema = new Schema(
         },
         deliveryTime: {
             type: Number,
-            default: 0,
+            required: true,
         },
         revisionNumber: {
             type: Number,
-            default: 0,
+            required: true,
         },
         features: {
             type: [String],
