@@ -9,6 +9,7 @@ import Add from './pages/add/Add';
 import Messages from './pages/messages/Messages';
 import Message from './pages/message/Message';
 import Login from './pages/login/Login';
+import Register from './pages/register/Register';
 import './App.scss';
 
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
@@ -64,6 +65,10 @@ const App = () => {
                 {
                     path: '/login',
                     element: <Login />,
+                },
+                {
+                    path: '/register',
+                    element: <Register />,
                 },
             ],
         },
