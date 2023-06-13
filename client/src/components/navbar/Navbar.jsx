@@ -1,6 +1,7 @@
 import './Navbar.scss';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import newRequest from '../../utils/newRequest';
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
@@ -20,10 +21,18 @@ const Navbar = () => {
         };
     }, []);
 
-    const currentUser = {
-        id: 1,
-        username: 'Ryan',
-        isSeller: true,
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            await newRequest.post('/auth/logout');
+            localStorage.setItem('currentUser', null);
+            navigate('/');
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -40,9 +49,7 @@ const Navbar = () => {
                     <span>Explore</span>
                     <span>English</span>
                     {!currentUser?.isSeller && <span>Become a Seller</span>}
-                    <span>Sign in</span>
-                    {!currentUser && <button>Join</button>}
-                    {currentUser && (
+                    {currentUser ? (
                         <div className="user" onClick={() => setOpen(!open)}>
                             <img src="" alt="" />
                             <span>{currentUser?.username}</span>
@@ -67,12 +74,21 @@ const Navbar = () => {
                                     <Link className="link" to="/settings">
                                         Settings
                                     </Link>
-                                    <Link className="link" to="/logout">
+                                    <Link className="link" to="/logout" onClick={handleLogout}>
                                         Logout
                                     </Link>
                                 </div>
                             )}
                         </div>
+                    ) : (
+                        <>
+                            <Link to="/login" className="link">
+                                Sign in
+                            </Link>
+                            <Link className="link" to="/register">
+                                <button>Join</button>
+                            </Link>
+                        </>
                     )}
                 </div>
             </div>
