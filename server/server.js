@@ -32,7 +32,7 @@ app.use(cookieParser());
 
 app.use('/api/auth', authRoute);
 app.use('/api/conversation', conversationRoute);
-app.use('/api/gig', gigRoute);
+app.use('/api/gigs', gigRoute);
 app.use('/api/message', messageRoute);
 app.use('/api/order', orderRoute);
 app.use('/api/review', reviewRoute);
