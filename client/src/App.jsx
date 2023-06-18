@@ -11,16 +11,21 @@ import Message from './pages/message/Message';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import './App.scss';
+import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 
 const App = () => {
+    const queryClient = new QueryClient();
+
     const Layout = () => {
         return (
             <div className="app">
-                <Navbar />
-                <Outlet />
-                <Footer />
+                <QueryClientProvider client={queryClient}>
+                    <Navbar />
+                    <Outlet />
+                    <Footer />
+                </QueryClientProvider>
             </div>
         );
     };

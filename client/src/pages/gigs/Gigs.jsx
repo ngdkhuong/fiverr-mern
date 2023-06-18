@@ -1,17 +1,28 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './Gigs.scss';
 import { gigs } from './../../data';
 import GigCard from './../../components/gigCard/GigCard';
 import { Link } from 'react-router-dom';
+import newRequest from '../../utils/newRequest';
+import { useQuery } from '@tanstack/react-query';
 
 const Gigs = () => {
     const [sort, setSort] = useState('sales');
     const [open, setOpen] = useState(false);
+    const minRef = useRef();
+    const maxRef = useRef();
 
     const reSort = (type) => {
         setSort(type);
         setOpen(false);
     };
+
+    const { isPending, error, data } = useQuery({
+        queryKey: ['repoData'],
+        queryFn: () => newRequest('/gigs'),
+    });
+
+    console.log(data);
 
     return (
         <div className="gigs">
@@ -27,8 +38,8 @@ const Gigs = () => {
                 <div className="menu">
                     <div className="left">
                         <span>Budged</span>
-                        <input type="text" placeholder="min" />
-                        <input type="text" placeholder="max" />
+                        <input ref={minRef} type="text" placeholder="min" />
+                        <input ref={maxRef} type="text" placeholder="max" />
                         <button>Apply</button>
                     </div>
                     <div className="right">
