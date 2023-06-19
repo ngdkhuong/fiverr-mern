@@ -1,8 +1,7 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Gigs.scss';
-import { gigs } from './../../data';
 import GigCard from './../../components/gigCard/GigCard';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
 import { useQuery } from '@tanstack/react-query';
 
@@ -12,17 +11,32 @@ const Gigs = () => {
     const minRef = useRef();
     const maxRef = useRef();
 
+    const { search } = useLocation();
+
+    const { isLoading, error, data, refetch } = useQuery({
+        queryKey: ['gigs'],
+        queryFn: () =>
+            newRequest
+                .get(`/gigs${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`)
+                .then((res) => {
+                    return res.data;
+                }),
+    });
+
+    console.log(data);
+
     const reSort = (type) => {
         setSort(type);
         setOpen(false);
     };
 
-    const { isPending, error, data } = useQuery({
-        queryKey: ['repoData'],
-        queryFn: () => newRequest('/gigs'),
-    });
+    useEffect(() => {
+        refetch();
+    }, [sort]);
 
-    console.log(data);
+    const apply = () => {
+        refetch();
+    };
 
     return (
         <div className="gigs">
@@ -37,10 +51,10 @@ const Gigs = () => {
                 <p>Explore the boundaries of art and technology with Liverr's AI artists</p>
                 <div className="menu">
                     <div className="left">
-                        <span>Budged</span>
-                        <input ref={minRef} type="text" placeholder="min" />
-                        <input ref={maxRef} type="text" placeholder="max" />
-                        <button>Apply</button>
+                        <span>Budget</span>
+                        <input ref={minRef} type="number" placeholder="min" />
+                        <input ref={maxRef} type="number" placeholder="max" />
+                        <button onClick={apply}>Apply</button>
                     </div>
                     <div className="right">
                         <span className="sort-by">Sort By</span>
@@ -58,9 +72,11 @@ const Gigs = () => {
                     </div>
                 </div>
                 <div className="cards">
-                    {gigs.map((gig) => (
-                        <GigCard key={gig.id} item={gig} />
-                    ))}
+                    {isLoading
+                        ? 'loading'
+                        : error
+                        ? 'Something went wrong'
+                        : data.map((gig) => <GigCard key={gig._id} item={gig} />)}
                 </div>
             </div>
         </div>
