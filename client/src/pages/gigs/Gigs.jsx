@@ -45,7 +45,7 @@ const Gigs = () => {
                     <Link to="/" className="link">
                         Liverr
                     </Link>
-                    - Graphics & Design
+                    {' >'} Graphics & Design
                 </h1>
                 <h1>AI Artist</h1>
                 <p>Explore the boundaries of art and technology with Liverr's AI artists</p>
