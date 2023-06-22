@@ -11,7 +11,7 @@ import Message from './pages/message/Message';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import './App.scss';
-import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 
@@ -44,46 +44,50 @@ const App = () => {
                     element: <Gigs />,
                 },
                 {
-                    path: '/gig/:id',
-                    element: <Gig />,
+                    path: '/myGigs',
+                    element: <MyGigs />,
                 },
                 {
                     path: '/orders',
                     element: <Orders />,
                 },
                 {
-                    path: '/mygigs',
-                    element: <MyGigs />,
-                },
-                {
-                    path: '/add',
-                    element: <Add />,
+                    path: '/messages',
+                    element: <Messages />,
                 },
                 {
                     path: '/message/:id',
                     element: <Message />,
                 },
                 {
-                    path: '/messages',
-                    element: <Messages />,
+                    path: '/add',
+                    element: <Add />,
                 },
                 {
-                    path: '/login',
-                    element: <Login />,
+                    path: '/gig/:id',
+                    element: <Gig />,
                 },
                 {
                     path: '/register',
                     element: <Register />,
                 },
+                {
+                    path: '/login',
+                    element: <Login />,
+                },
+                //   {
+                //     path: "/pay/:id",
+                //     element: <Pay />,
+                //   },
+                //   {
+                //     path: "/success",
+                //     element: <Success />,
+                //   },
             ],
         },
     ]);
 
-    return (
-        <div>
-            <RouterProvider router={router} />
-        </div>
-    );
+    return <RouterProvider router={router} />;
 };
 
 export default App;

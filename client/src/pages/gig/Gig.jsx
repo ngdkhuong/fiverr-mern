@@ -15,8 +15,6 @@ const Gig = () => {
             }),
     });
 
-    console.log(data);
-
     return (
         <div className="gig">
             {isLoading ? (
@@ -249,7 +247,7 @@ const Gig = () => {
                             </div>
                         </div>
                         <div className="features">
-                            {features.map((feature) => {
+                            {data.features.map((feature) => {
                                 <div className="item" key={feature}>
                                     <img src="/img/greencheck.png" alt="" />
                                     <span>{feature}</span>

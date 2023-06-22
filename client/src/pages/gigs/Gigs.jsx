@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './Gigs.scss';
-import GigCard from './../../components/gigCard/GigCard';
+import GigCard from '../../components/gigCard/GigCard';
 import { Link, useLocation } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
 import { useQuery } from '@tanstack/react-query';
@@ -23,8 +23,6 @@ const Gigs = () => {
                 }),
     });
 
-    console.log(data);
-
     const reSort = (type) => {
         setSort(type);
         setOpen(false);
@@ -44,8 +42,8 @@ const Gigs = () => {
                 <h1 className="breadcrumbs">
                     <Link to="/" className="link">
                         Liverr
-                    </Link>
-                    {' >'} Graphics & Design
+                    </Link>{' '}
+                    {'>'} Graphics & Design
                 </h1>
                 <h1>AI Artist</h1>
                 <p>Explore the boundaries of art and technology with Liverr's AI artists</p>
@@ -75,7 +73,7 @@ const Gigs = () => {
                     {isLoading
                         ? 'loading'
                         : error
-                        ? 'Something went wrong'
+                        ? 'Something went wrong!'
                         : data.map((gig) => <GigCard key={gig._id} item={gig} />)}
                 </div>
             </div>
